@@ -144,12 +144,12 @@ nav{
 
 .title-white {
     text-align: center;
-    color: white;
+    color: chartreuse;
 }
 
 .title-dark {
     text-align: center;
-    color: black;
+    color: chartreuse;
 }
 
 .bg-darkBlue {
@@ -259,8 +259,23 @@ header p {
 }
 
 .title-about {
-    background-image: url("../img/Section.svg");
+    position: relative;
     display: flex;
+    background: none;
+}
+.title-about::before {
+    content: "";
+    background-image: url("../img/background.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5; /* Ajuste o nível de opacidade */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca a imagem atrás do conteúdo da div */
 }
 
 .title-about-2 {
@@ -272,13 +287,13 @@ header p {
 
 .div-p{
     width: 50%; /* Ajuste o tamanho conforme necessário */
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 5px;
     margin-left: 20rem;
 }
 .div-p2 {
     width: 48%; /* Ajuste o tamanho conforme necessário */
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 5px;
 
 }
@@ -323,7 +338,7 @@ header p {
 
 .skills {
     padding: 30px 0;
-
+    background-color: #00111f;
 }
 
 .group-items {
@@ -376,7 +391,7 @@ header p {
 }
 
 .hobbies {
-    background-color: #16425b;
+    background-color: #00111f;
     padding: 30px 0;
 }
 
