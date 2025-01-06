@@ -175,7 +175,7 @@ nav{
     margin-left: 10px;
 }
 
-header {
+.header {
     display: flex;
     background-color: #181717;
     flex-direction: row;
@@ -185,7 +185,7 @@ header {
     margin-top: 2%;
 }
 
-header h1 {
+.header h1 {
     width: 751px;
     height: 122px;
     font-weight: 700;
@@ -198,7 +198,7 @@ header h1 {
     flex-grow: 0;
 }
 
-header p {
+.header p {
     width: 751px;
     height: 52px;
     font-size: 16px;
@@ -283,6 +283,7 @@ header p {
     size: 100px;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .div-p{
@@ -290,12 +291,13 @@ header p {
     font-size: 1.3rem;
     padding: 5px;
     margin-left: 20rem;
+    word-break: break-word;
 }
 .div-p2 {
     width: 48%; /* Ajuste o tamanho conforme necessário */
     font-size: 1.3rem;
     padding: 5px;
-
+    word-break: break-word;
 }
 
 
@@ -310,8 +312,11 @@ header p {
     width: 100%;
 }
 .p1 {
-    width: 60%;
-    padding: 20px;
+    font-size: 1rem; /* Ajuste do tamanho da fonte */
+    line-height: 1.5; /* Aumente o line-height para melhorar a legibilidade */
+    width: 60%; /* Altere de 60% para 100% */
+    word-wrap: break-word; /* Força a quebra de palavras longas */
+    padding: 10px; 
 }
 
 
@@ -474,6 +479,8 @@ header p {
 .description-project .text-description {
     color: white;
     margin-bottom: 15px;
+    width: 60%;
+    font-size: 1.3rem;
 }
 
 .btn-repository {
@@ -662,3 +669,85 @@ footer {
     font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header h1, .header p {
+        width: 100%;
+        height: 40%;
+        text-align: center; /* Alinha o texto ao centro em telas menores */
+        margin: 10px 0;
+    }
+
+    .header h1 {
+        font-size: 28px; /* Ajusta o tamanho do título para telas menores */
+    }
+
+    .header p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo para telas menores */
+    }
+
+    .avatar-header {
+        width: 60%; /* Ajusta a largura da imagem em telas menores */
+        padding-right: 3em; /* Reduz o padding para não desalinhar */
+    }
+
+    .avatar-header .avatar {
+        width: 250px; /* Reduz o tamanho da imagem */
+        height: 250px; /* Reduz a altura da imagem */
+    }
+
+    .bigimage {
+        width: 100%; /* Reduz a largura da imagem em telas menores */
+        height: 50; /* Ajusta a altura proporcionalmente */
+        margin-top: 0px; /* Ajusta a margem superior em telas menores */
+    }
+
+    .title-about-2 h2 {
+        font-size: 1rem; /* Reduz o tamanho do título em telas médias */
+    }
+
+    .div-p  {
+        width: 79%;     
+        margin: 5px;
+
+    }
+
+    .div-p2 {
+        width: 80%; /* Ajusta a largura para dispositivos menores */    
+        margin-left: 2px;
+
+    }
+
+    .about-p {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .p1 {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .description-project .text-description {
+        color: white;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .header p {
+        font-size: 14px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+}
